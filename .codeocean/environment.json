@@ -1,0 +1,8 @@
+{
+	"version": 1,
+	"base_image": "codeocean/py-julia-r:python3.10.12-R4.2.3-julia1.7.0-ubuntu22.04",
+	"options": {
+		"registry_host_arg": true,
+		"git_ask_pass": true
+	}
+}
