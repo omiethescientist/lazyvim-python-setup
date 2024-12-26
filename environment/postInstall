@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -e
+
+echo install neovim
+#Download latest neovim appimage
+echo download neovim appimage
+wget "https://github.com/neovim/neovim/releases/download/v0.10.2/nvim.appimage"
+
+#Install nvim 
+echo configure appimage
+chmod u+x nvim.appimage
+./nvim.appimage --appimage-extract
+ln -s /squashfs-root/usr/bin/nvim /usr/local/bin/nvim 
+
+#Install lazyvim
+echo download lazyvim into configuration
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git

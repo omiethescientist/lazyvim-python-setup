@@ -1,4 +1,4 @@
-# hash:sha256:f92236ab1197147de92a5f715d87dc8fdb3507bb971f6f088bf48d88b29c3067
+# hash:sha256:60a51018340e1d814174e8fc609c10980efb63a166052e2786f5f7494df4fd80
 ARG REGISTRY_HOST
 FROM $REGISTRY_HOST/codeocean/py-julia-r:python3.10.12-R4.2.3-julia1.7.0-ubuntu22.04
 
@@ -29,3 +29,6 @@ RUN apt-get update \
 
 RUN pip install -U --no-cache-dir \
     ruff
+
+COPY postInstall /
+RUN /postInstall
