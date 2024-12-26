@@ -58,10 +58,12 @@
 					"version": "1.4.0-1"
 				},
 				{
-					"name": "nodejs"
+					"name": "nodejs",
+					"version": "12.22.9~dfsg-1ubuntu3.6"
 				},
 				{
-					"name": "npm"
+					"name": "npm",
+					"version": "8.5.1~ds-1"
 				},
 				{
 					"name": "wget",
@@ -69,15 +71,6 @@
 				}
 			],
 			"install_software_properties_common": true
-		},
-		"pip": {
-			"packages": [
-				{
-					"name": "ruff"
-				}
-			],
-			"options": {},
-			"pre_install_options": {}
 		}
 	}
 }

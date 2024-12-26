@@ -1,4 +1,4 @@
-# hash:sha256:60a51018340e1d814174e8fc609c10980efb63a166052e2786f5f7494df4fd80
+# hash:sha256:c5ad091cf21896ad525d0b39fb032c536a9b839c2b2f3756c884f07cdccf13d4
 ARG REGISTRY_HOST
 FROM $REGISTRY_HOST/codeocean/py-julia-r:python3.10.12-R4.2.3-julia1.7.0-ubuntu22.04
 
@@ -22,13 +22,10 @@ RUN apt-get update \
         libxcb-xinerama0=1.14-3ubuntu3 \
         libxcb-xinput0=1.14-3ubuntu3 \
         libxkbcommon-x11-0=1.4.0-1 \
-        nodejs \
-        npm \
+        nodejs=12.22.9~dfsg-1ubuntu3.6 \
+        npm=8.5.1~ds-1 \
         wget=1.21.2-2ubuntu1.1 \
     && rm -rf /var/lib/apt/lists/*
-
-RUN pip install -U --no-cache-dir \
-    ruff
 
 COPY postInstall /
 RUN /postInstall
