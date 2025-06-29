@@ -22,4 +22,5 @@ echo download lazyvim dotfiles
 git clone https://github.com/omiethescientist/lazyvim-python-setup.git
 cp lazyvim-python-setup/code/plugins/*.lua ~/.config/nvim/lua/plugins/
 cp lazyvim-python-setup/code/config/*.lua ~/.config/nvim/lua/config/
+cp lazyvim-python-setup/code/tmux.conf ~/.tmux.conf
 rm -rf lazyvim-python-setup
